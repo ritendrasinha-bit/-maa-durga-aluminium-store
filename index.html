@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maa Durga Aluminium Store</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:#1f2937;background:#f5f7fa}
+header{background:#111827;color:white;padding:16px 20px;position:sticky;top:0;z-index:10}
+.nav{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:15px}
+.logo{font-size:20px;font-weight:700}.nav a{color:white;text-decoration:none;margin-left:16px;font-size:14px}
+.hero{background:linear-gradient(135deg,#1f2937,#4b5563);color:white;padding:70px 20px}
+.hero-inner{max-width:1100px;margin:auto}.hero h1{font-size:42px;margin:0 0 12px}.hero p{font-size:18px;max-width:650px;line-height:1.6}
+.btn{display:inline-block;background:#f59e0b;color:#111827;padding:13px 20px;border-radius:8px;text-decoration:none;font-weight:700;border:0;cursor:pointer}
+section{max-width:1100px;margin:auto;padding:45px 20px}h2{text-align:center;font-size:30px;margin-bottom:30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:white;border-radius:12px;padding:22px;box-shadow:0 3px 12px #00000010}
+.icon{font-size:42px}.price{font-weight:700;color:#b45309;margin:10px 0}
+label{display:block;margin:12px 0 6px;font-weight:600}input,select,textarea{width:100%;padding:11px;border:1px solid #d1d5db;border-radius:7px;font-size:15px}
+.quote{max-width:700px;margin:auto;background:white;padding:25px;border-radius:12px;box-shadow:0 3px 12px #00000010}
+.result{margin-top:18px;padding:15px;background:#f3f4f6;border-radius:8px;font-weight:700}
+.contact{background:#111827;color:white}.contact a{color:#fbbf24}
+footer{text-align:center;padding:25px;background:#0b1220;color:#cbd5e1;font-size:14px}
+@media(max-width:650px){.nav{flex-direction:column;align-items:flex-start}.nav a{margin:0 12px 0 0}.hero h1{font-size:32px}}
+</style>
+</head>
+<body>
+<header>
+<div class="nav">
+<div class="logo">🏪 Maa Durga Aluminium Store</div>
+<nav><a href="#products">Products</a><a href="#quote">Get Quote</a><a href="#contact">Contact</a></nav>
+</div>
+</header>
+
+<div class="hero">
+<div class="hero-inner">
+<h1>Aluminium Windows & Doors</h1>
+<p>Quality aluminium windows, doors and custom solutions for homes, offices and shops. Tell us your size and requirements and get an estimated quotation.</p>
+<a class="btn" href="#quote">Get a Quick Quote</a>
+</div>
+</div>
+
+<section id="products">
+<h2>Our Products</h2>
+<div class="grid">
+<div class="card"><div class="icon">🪟</div><h3>Sliding Windows</h3><p>Modern aluminium sliding windows for homes and offices.</p><div class="price">Custom Quote</div></div>
+<div class="card"><div class="icon">🪟</div><h3>Casement Windows</h3><p>Durable aluminium casement window systems.</p><div class="price">Custom Quote</div></div>
+<div class="card"><div class="icon">🚪</div><h3>Aluminium Doors</h3><p>Sliding, hinged and custom aluminium doors.</p><div class="price">Custom Quote</div></div>
+<div class="card"><div class="icon">🧩</div><h3>Folding Systems</h3><p>Space-saving folding doors and partitions.</p><div class="price">Custom Quote</div></div>
+</div>
+</section>
+
+<section id="quote">
+<h2>Get an Estimated Quote</h2>
+<div class="quote">
+<label for="type">Product</label>
+<select id="type"><option value="window">Aluminium Window</option><option value="door">Aluminium Door</option></select>
+<label for="width">Width (feet)</label><input id="width" type="number" min="0" step="0.1" placeholder="e.g. 4">
+<label for="height">Height (feet)</label><input id="height" type="number" min="0" step="0.1" placeholder="e.g. 5">
+<label for="qty">Quantity</label><input id="qty" type="number" min="1" value="1">
+<label for="glass">Glass Type</label>
+<select id="glass"><option value="1">Standard</option><option value="1.15">Toughened (+15%)</option><option value="1.25">Double Glass (+25%)</option></select>
+<button class="btn" style="margin-top:18px" onclick="calculate()">Calculate Estimate</button>
+<div id="result" class="result">Enter dimensions to see an estimate.</div>
+<p style="font-size:13px;color:#6b7280">*This is an example calculator. Actual pricing can be updated to your shop's rates.</p>
+</div>
+</section>
+
+<section>
+<h2>Why Choose Us?</h2>
+<div class="grid">
+<div class="card"><h3>✓ Custom Sizes</h3><p>Solutions made to your required measurements.</p></div>
+<div class="card"><h3>✓ Quality Materials</h3><p>Aluminium profiles and glass options to suit your project.</p></div>
+<div class="card"><h3>✓ Installation</h3><p>Professional fitting can be arranged for your project.</p></div>
+<div class="card"><h3>✓ Personal Service</h3><p>Contact us for measurements, advice and quotations.</p></div>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<h2>Contact Maa Durga Aluminium Store</h2>
+<div class="card" style="color:#1f2937;max-width:650px;margin:auto">
+<p><strong>Phone:</strong> <span>YOUR PHONE NUMBER</span></p>
+<p><strong>WhatsApp:</strong> <span>YOUR WHATSAPP NUMBER</span></p>
+<p><strong>Address:</strong> <span>YOUR SHOP ADDRESS</span></p>
+<p><strong>Hours:</strong> <span>YOUR OPENING HOURS</span></p>
+<a class="btn" href="#" onclick="alert('Add your WhatsApp number to activate this button.')">WhatsApp Us</a>
+</div>
+</section>
+
+<footer>© 2026 Maa Durga Aluminium Store · Aluminium Windows & Doors</footer>
+
+<script>
+function calculate(){
+  const w=parseFloat(document.getElementById('width').value);
+  const h=parseFloat(document.getElementById('height').value);
+  const q=parseInt(document.getElementById('qty').value||1);
+  const type=document.getElementById('type').value;
+  const glass=parseFloat(document.getElementById('glass').value);
+  if(!w||!h||w<=0||h<=0){document.getElementById('result').textContent='Please enter valid width and height.';return;}
+  // Placeholder rates; replace with the shop's actual rates later.
+  const rate=type==='window'?85:110;
+  const total=w*h*q*rate*glass;
+  document.getElementById('result').textContent='Estimated price: $'+total.toFixed(2);
+}
+</script>
+</body>
+</html>
